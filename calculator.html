@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinMetrix</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+</head>
+  
+<body>
+  <div class="header">
+    <img src="images/calculator.svg" alt="Banner" class="header-banner">
+    <div class="header-content">
+      <h1>Аналітичні Інструменти FinMetrix</h1>
+      <p>Перетворіть дані у рішення з допомогою нашого набору фінансових калькуляторів. Простота використання та точність - все, що потрібно для ефективного управління фінансами.</p>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <a href="/index.html">Головна</a>
+    <a href="/calculator.html">Калькулятор</a>
+    <a href="/about-us.html">Про нас</a>
+    <a href="/useful-resources.html">Корисні ресурси</a>
+  </div>
+
+  <div class="main">
+    <div id="ROA" class="section light">
+      <h2>1. Рентабельність активів (Return on Assets)</h2>
+      <p class="formula">ROA = \( \frac{{\text{Чистий прибуток}}}{{\text{Вартість активів}}} \times 100\% \)</p>
+      <form id="roa-form">
+        <label for="roa-net-profit">Чистий прибуток:</label>
+        <input type="number" id="roa-net-profit" name="roa-net-profit" required>
+        <p></p>
+        <label for="assets-value">Вартість активів:</label>
+        <input type="number" id="assets-value" name="assets-value" required>
+        <p></p>
+        <button type="button" onclick="calculateROA()">Розрахувати</button>
+      </form>
+      <p class="result">Рентабельність активів (ROA): <span id="roa-result"></span>%</p>
+    </div>  
+    
+    
+    <div id="ROE" class="section dark">
+      <h2>2. Рентабельність власного капіталу (Return on Equity)</h2>
+      <p class="formula">ROE = \( \frac{{\text{Чистий прибуток}}}{{\text{Вартість власного капіталу}}} \times 100\% \)</p>
+      <form id="roe-form">
+        <label for="roe-net-profit">Чистий прибуток:</label>
+        <input type="number" id="roe-net-profit" name="roe-net-profit" required>
+        <p></p>
+        <label for="equity-value">Вартість власного капіталу:</label>
+        <input type="number" id="equity-value" name="equity-value" required>
+        <p></p>
+        <button type="button" onclick="calculateROE()">Розрахувати</button>
+      </form>
+      <p class="result">Рентабельність власного капіталу (ROE): <span id="roe-result"></span>%</p>
+    </div>
+    
+    <div id="inventory-turnover" class="section light">
+      <h2>3. Оборотність запасів</h2>
+      <p class="formula">Оборотність запасів = \( \frac{{\text{Виручка від продажу}}}{{\text{Середня вартість запасів}}}\)</p>
+      <form id="inventory-turnover-form">
+        <label for="sales-revenue">Виручка від продажу:</label>
+        <input type="number" id="sales-revenue" required>
+        <p></p>
+        <label for="average-inventory">Середня вартість запасів:</label>
+        <input type="number" id="average-inventory" required>
+        <p></p>
+        <button type="button" onclick="calculateInventoryTurnover()">Розрахувати</button>
+      </form>
+      <p class="result">Оборотність запасів: <span id="inventory-turnover-result"></span></p>
+    </div>
+    <div id="current-ratio" class="section dark">
+      <h2>4. Коефіцієнт поточної ліквідності</h2>
+      <p class="formula">Коефіцієнт поточної ліквідності = \( \frac{{\text{Оборотні активи}}}{{\text{Поточні зобов'язання}}}\)</p>
+      <form id="current-ratio-form">
+        <label for="current-assets">Оборотні активи:</label>
+        <input type="number" id="current-assets" required>
+        <p></p>
+        <label for="current-liabilities">Поточні зобов'язання:</label>
+        <input type="number" id="current-liabilities" required>
+        <p></p>
+        <button type="button" onclick="calculateCurrentRatio()">Розрахувати</button>
+      </form>
+      <p class="result">Коефіцієнт поточної ліквідності: <span id="current-ratio-result"></span></p>
+
+    </div>
+    <div id="net-profit-margin-form" class="section light">
+      <h2>5. Маржа чистого прибутку</h2>
+      <p class="formula">Маржа чистого прибутку = \( \frac{{\text{Чистий прибуток}}}{{\text{Виручка}}} \times 100\% \)</p>
+      <form id="net-profit-margin-form">
+        <label for="net-profit-margin-net-profit">Чистий прибуток:</label>
+        <input type="number" id="net-profit-margin-net-profit" required>
+        <p></p>
+        <label for="net-profit-margin-revenue">Виручка:</label>
+        <input type="number" id="net-profit-margin-revenue" required>
+        <p></p>
+        <button type="button" onclick="calculateNetProfitMargin()">Розрахувати</button>
+      </form>
+      <p class="result">Маржа чистого прибутку: <span id="net-profit-margin-result"></span>%</p>
+    </div>
+    <footer>
+  <p>&copy; 2023 Усі права захищені.</p>
+</footer>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</body>
+</html>

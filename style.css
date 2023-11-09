@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+.header {
+  position: relative;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.header-banner {
+  position: absolute;
+  top: 1em;
+  bottom: 10em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Adjusted to be above the background color */
+  opacity: 0.2; /* Adjust the transparency as needed */
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.navbar {
+  background-color: #111;
+  overflow-x: hidden;
+  text-align: center;
+  margin-bottom: 40px; 
+}
+
+.navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ddd;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #fff;
+  background-color: #575757;
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    display: block; /* Stack the links instead of having them inline */
+    margin-right: 0; /* Remove the margin-right as it's no longer needed */
+    margin-bottom: 10px; /* Add some space between the stacked links */
+  }
+
+  /* Optional: if you want to remove the extra space after the last link */
+  .navbar a:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main {
+  padding: 0px 10px;
+}
+
+.section {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.light {
+  background-color: #f0f0f0;
+}
+
+.dark {
+  background-color: #d9d9d9;
+}
+
+.formula {
+  font-size: 25px;
+  font-style: italic;
+}
+
+button {
+  background-color: #333; /* Button color */
+  color: white; /* Text color */
+  padding: 12px 24px; /* Padding inside the button */
+  border: none; /* No borders */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Mouse pointer changes to a hand symbol */
+  font-size: 18px; /* Font size similar to your navbar links */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+  background-color: #575757; /* Button color when hovered */
+}
+
+footer {
+  text-align: center;
+  opacity: 0.7;
+  font-size: 20px;
+}
